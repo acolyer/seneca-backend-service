@@ -11,12 +11,14 @@ parameters:
 
   - name: role_name
     required: true
+    substitution: role_name
     description: The Seneca role for this microservice
     pattern: "^[a-zA-Z_]+$"
     valid-input-description: "The Seneca role name for this service, e.g. 'math'"
 
   - name: description
     required: false
+    substitution: ${description}
     description: Short description of your new service
     pattern: "[a-zA-Z_$][a-zA-Z\\d_$]*"
     valid-input-description: "A short description of the service"
